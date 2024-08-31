@@ -3,3 +3,6 @@ README.md
 
 # ignore .class files
 *.class
+
+# ignore .java files
+*.java
