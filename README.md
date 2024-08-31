@@ -46,3 +46,7 @@
 ### Prerequisites
 
 ### Installation
+
+### Resources
+
+- [GeeksForGeeks](https://www.geeksforgeeks.org/typecasting-in-java/)

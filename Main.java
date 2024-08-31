@@ -3,65 +3,28 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    /*
-      Scanner sc = new Scanner(System.in);
+    String userText = userInput();
+    String binary = text2binary(userText);
 
-      System.out.println("Hi, Man!\nCould you enter your Text (separated by space)?");
-      String in = sc.nextLine();
+    System.out.println("text2binary: " + binary);
+  }
 
-      char symbol='a';
+  public static String userInput() {
+    Scanner in = new Scanner(System.in);
+    System.out.print("Welcome to text2binary converter!\nCould you enter your text? ");
+    String str = in.nextLine();
+    return str;
+  }
 
-      int binary = symbol;
-
-      String b = Integer.toBinaryString(binary);
-
-      System.out.println("The Binary: " + b);
-
-      String something = "Hi Man!";
-    */
-
-    String message = "Hello, World!";
-
-    System.out.println("message: " + message);
-
-    // String space = " ";
+  public static String text2binary(String text) {
     String binary = "";
 
-    for(int i=0; i<message.length(); ++i) {
-      char c = message.charAt(i);
-      int b = c;
+    for(int i=0; i<text.length(); ++i) {
+      char c = text.charAt(i);
+      int b = c; // type casting [ Implicit type casting \ widening type casting(from char to int) ]
       binary += Integer.toBinaryString(b) + " ";
-      // if(c == ' ') {
-      //   binary += space;
-      // }
-
     }
-
-
-    System.out.println("Binary: " + binary);
-
-
-    // for(int i=0; i<something.length()-1; ++i) {
-
-
-    // }
-
-
-    //int binary = symbol;
-
-
-    //System.out.println(binary); // 97
-
+    return binary;
   }
-}
 
-/*
-  Binary
-  char => Decimal => Binary
-  B    => 66      =>
-  i    => 105     =>
-  n    => 110     =>
-  a    => 97      =>
-  r    => 114     =>
-  y    => 121     =>
-*/
+}
