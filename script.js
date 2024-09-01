@@ -1,12 +1,16 @@
 const textToBinary = () => {
   const input = document.getElementById("txt-1");
   const output = document.getElementById("txt-2");
-  const ch = input.value.split("");
 
-  let binaryTxt = "";
-  ch.forEach(e => {
-    binaryTxt += `${e.charCodeAt().toString(2).padStart(8, "0")} `;
+  let binaryText = "";
+
+  input.value.split("").forEach(c => {
+    if (!isNaN(c) && c != " ") {
+      binaryText += `${Number(c).toString(2).padStart(8, "0")} `;
+    } else {
+      binaryText += `${c.charCodeAt().toString(2).padStart(8, "0")} `;
+    }
   });
 
-  output.innerText = binaryTxt;
+  output.innerText = binaryText;
 }

@@ -1,6 +1,3 @@
-# ignore README.md file
-README.md
-
 # ignore .class files
 *.class
 
